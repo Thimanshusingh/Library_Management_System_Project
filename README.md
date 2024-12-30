@@ -422,7 +422,7 @@ DELIMITER ;
 call issue_book('IS155', 'C102','978-0-375-41398-8', 'E104');
 ```
 
-**Task 20: Create Table As Select (CTAS) Objective** Create a CTAS (Create Table As Select) query to identify overdue books and calculate fines. Description: Write a CTAS query to create a new table that lists each member and the books they have issued but not returned within 30 days. The table should include: The number of overdue books. The total fines, with each day's fine calculated at $0.50. The number of books issued by each member. The resulting table should show: Member ID Number of overdue books Total fines
+**Task 19: Create Table As Select (CTAS) Objective** Create a CTAS (Create Table As Select) query to identify overdue books and calculate fines. Description: Write a CTAS query to create a new table that lists each member and the books they have issued but not returned within 30 days. The table should include: The number of overdue books. The total fines, with each day's fine calculated at $0.50. The number of books issued by each member. The resulting table should show: Member ID Number of overdue books Total fines
 
 ```sql
 CREATE TABLE books_overdue AS
@@ -459,4 +459,4 @@ select * from books_overdue;
 
 ## Conclusion
 
-**This project demonstrates the application of SQL skills in creating and managing a library management system. It includes database setup, data manipulation, and advanced querying, providing a solid foundation for data management and analysis.
+**This project demonstrates the application of SQL skills in creating and managing a library management system. It includes database setup, data manipulation, and advanced querying, providing a solid foundation for data management and analysis.**
