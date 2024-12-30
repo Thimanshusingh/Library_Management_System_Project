@@ -15,6 +15,7 @@ This project focuses on building a Library Management System using SQL, highligh
 ##Project Structure
 
 **1.Database Setup**
-![Alt text](![Diagram](https://github.com/user-attachments/assets/0ea25d16-4e85-4345-992a-9539428b5f64)
-)
+![Alt text](https://github.com/Thimanshusingh/Library_Management_System_Project_SQL/blob/main/Diagram.png)
+
+
 
