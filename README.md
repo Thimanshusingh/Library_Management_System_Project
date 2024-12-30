@@ -23,6 +23,8 @@ This project focuses on building a Library Management System using SQL, highligh
 **-Table Creation:** Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
 
 ```sql
+create schema library_project;
+
 -- Library Management System
 -- Creating branch table
 
@@ -107,4 +109,32 @@ ADD FOREIGN KEY (issued_id)
 REFERENCES issued_status (issued_id);
 ```
 
+## 2. CRUD Operations
+**Create:** Inserted sample records into the books table.
+**Read:** Retrieved and displayed data from various tables.
+**Update:** Updated records in the employees table.
+**Delete:** Removed records from the members table as needed.
 
+**Task 1. Create a new book Record :** "978-1-60129-456-2', 'To Kill a Mockingbird', 'Classic', 6.00, 'yes', 'Harper Lee', 'J.B. Lippincott & Co.')"
+
+```sql
+INSERT INTO books(isbn, book_title, category, rental_price, status, author, publisher)
+VALUES (978-1-60129-456-2, 'To Kill a Mockingbird', 'Classic', 6.00, 'yes', 'Harper Lee', 'J.B. Lippincott & Co.');
+```
+
+**Task 2: Update an Existing Member's Address.**
+
+```sql
+UPDATE members 
+SET 
+    member_address = ' 741 Main St'
+WHERE
+```
+
+**Task 3: Delete a Record from the Issued Status Table -- Objective: Delete the record with issued_id = 'IS121' from the issued_status table.**
+
+```sql
+DELETE FROM issued_status 
+WHERE
+    issued_id = 'IS121';
+```
