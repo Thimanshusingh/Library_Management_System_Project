@@ -18,8 +18,9 @@ This project focuses on building a Library Management System using SQL, highligh
 
 ![Alt text](https://github.com/Thimanshusingh/Library_Management_System_Project_SQL/blob/main/Diagram.png)
 
-**- Database Creation:** Created a database named library_project
-**- Table Creation:** Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
+** -Database Creation:** Created a database named library_project
+
+** -Table Creation:** Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
 
 ```sql
 -- Library Management System
