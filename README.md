@@ -1,6 +1,7 @@
 # Library_Management_System_Project
 
 ## Project Overview
+
 **Project Title:** Library Management System
 
 **Level:** Intermediate
@@ -114,9 +115,13 @@ REFERENCES issued_status (issued_id);
 ```
 
 ## 2. CRUD Operations
+
 **Create:** Inserted sample records into the books table.
+
 **Read:** Retrieved and displayed data from various tables.
+
 **Update:** Updated records in the employees table.
+
 **Delete:** Removed records from the members table as needed.
 
 **Task 1. Create a new book Record :** "978-1-60129-456-2', 'To Kill a Mockingbird', 'Classic', 6.00, 'yes', 'Harper Lee', 'J.B. Lippincott & Co.')"
