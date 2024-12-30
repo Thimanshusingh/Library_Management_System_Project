@@ -18,5 +18,92 @@ This project focuses on building a Library Management System using SQL, highligh
 
 ![Alt text](https://github.com/Thimanshusingh/Library_Management_System_Project_SQL/blob/main/Diagram.png)
 
+**- Database Creation:** Created a database named library_project
+**- Table Creation:** Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
+
+```sql
+-- Library Management System
+-- Creating branch table
+
+CREATE TABLE branch (
+    branch_id VARCHAR(10) PRIMARY KEY,
+    manager_id VARCHAR(10),
+    branch_address VARCHAR(50),
+    contact_no INT
+);
+
+-- Creating employees table
+
+CREATE TABLE employees (
+    emp_id VARCHAR(10) PRIMARY KEY,
+    emp_name VARCHAR(30),
+    position VARCHAR(15),
+    salary INT,
+    branch_id VARCHAR(10)
+);
+
+-- Creating books table
+
+CREATE TABLE books (
+    isbn VARCHAR(20) PRIMARY KEY,
+    book_title VARCHAR(75),
+    category VARCHAR(40),
+    rental_price FLOAT,
+    status VARCHAR(10),
+    author VARCHAR(60),
+    publisher VARCHAR(70)
+);
+
+-- Creating members table
+
+CREATE TABLE members (
+    member_id VARCHAR(10) PRIMARY KEY,
+    member_name VARCHAR(50),
+    member_address VARCHAR(80),
+    reg_date DATE
+);
+
+-- Creating issued_status table
+
+CREATE TABLE issued_status (
+    issued_id VARCHAR(10) PRIMARY KEY,
+    issued_member_id VARCHAR(10),
+    issued_book_name VARCHAR(75),
+    issued_date DATE,
+    issued_book_isbn VARCHAR(40),
+    issued_emp_id VARCHAR(10)
+);
+
+-- Creating return_status table
+
+CREATE TABLE return_status (
+    return_id VARCHAR(10) PRIMARY KEY,
+    issued_id VARCHAR(10),
+    return_book_name VARCHAR(75),
+    return_date DATE,
+    return_book_isbn VARCHAR(20)
+);
+
+-- Foreign Key
+ALTER TABLE issued_status
+ADD FOREIGN KEY (issued_member_id)
+REFERENCES members (member_id);
+
+ALTER TABLE issued_status
+ADD FOREIGN KEY (issued_book_isbn)
+REFERENCES books(isbn);
+
+ALTER TABLE issued_status
+ADD FOREIGN KEY (issued_emp_id)
+REFERENCES employees (emp_id);
+
+ALTER TABLE employees
+ADD FOREIGN KEY (branch_id)
+REFERENCES branch (branch_id);
+
+ALTER TABLE return_status
+ADD FOREIGN KEY (issued_id)
+REFERENCES issued_status (issued_id);
+```
 
 
